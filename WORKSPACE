@@ -24,7 +24,8 @@ oci_pull(
     name = "base_image",
     registry = "index.docker.io",
     repository = "runpod/pytorch",
-    digest = "sha256:bf2d42c1240bb8d3e87cce9b2a16c0e18c691e2e8b6b55f0063b55696292d6d0",
+    tag = "1.13.0-py3.10-cuda11.7.1-devel-ubuntu22.04",
+    digest = "sha256:c4075bfad940d8042966fdac95d4049f017f2611f3ff29b70fa0b129c2a0018b",
     platforms = [
         "linux/amd64",
         "linux/arm64",
