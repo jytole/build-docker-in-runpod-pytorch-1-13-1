@@ -5,7 +5,7 @@ load("@rules_oci//oci:defs.bzl", "oci_image", "oci_push")
 
 # Create a new OCI image with an added text file
 oci_image(
-    name = "custom_image",
+    name = "test_image",
     base = "@base_image",
     tars = [
         ":add_text_file",
@@ -23,7 +23,7 @@ genrule(
 
 oci_push(
     name = "push_custom_image",
-    image = ":custom_image",
-    repository = "index.docker.io/{YOUR_USERNAME}/custom_image",
+    image = ":test_image",
+    repository = "index.docker.io/{YOUR_USERNAME}/test_image",
     remote_tags = ["latest"]
 )
